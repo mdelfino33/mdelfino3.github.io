@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>About Me Page</title>
+    <style>
+        .fa:hover {
+            opacity: 0.9;
+        }
+ 
+        .fa-facebook {
+            background: #007bb5;
+            color: white;
+        }
+ 
+        .fa-instagram {
+            background: #d382c5;
+            color: white;
+        }
+ 
+        .fa-twitter {
+            background: #252524;
+            color: white;
+        }
+ 
+        .fa {
+            padding: 10px;
+            font-size: 40px;
+            width: 60px;
+            text-decoration: none;
+            /* margin: 5px 80px; */
+        }
+ 
+        h2 {
+            color: #252524;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi, It's Marvin</h1>
+        <h2>I'm your Trusted IT Partner</h2>
+        <div class="image">
+            <img src="./images/about-me-image.png" alt="Photograph Of Me">
+        </div>
+        <p>
+            I’ve spent the past 8+ years managing ICT infrastructure, with a focus on maintaining and improving 
+            institutional IT assets and network systems. In my role as OIC for ICT Infrastructure at First City Providential College, 
+            I oversee the college's network infrastructure, IT assets, and ensure seamless day-to-day operations.
+              <p style="text-align: center;">Contact Me:</p>
+              <!-- Add font awesome icons -->
+              <a href="https://www.facebook.com/profile.php?id=100000272615356" target="_blank" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+            <br><br>
+        </p>
+       
+    </div>
+</body>
+</html>
+
+<script type="module">
+    import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+  
+    const widget = await Chatbox.initBubble({
+      agentId: 'cm4mftz6j09kyppjjon8eykh0',
+      
+      // optional 
+      // If provided will create a contact for the user and link it to the conversation
+      contact: {
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'customer@email.com',
+        phoneNumber: '+33612345644',
+        userId: '42424242',
+      },
+      // optional
+      // Override initial messages
+      initialMessages: [
+        'Hello Georges how are you doing today?',
+        'How can I help you ?',
+      ],
+      // optional
+      // Provided context will be appended to the Agent system prompt
+      context: "The user you are talking to is John. Start by Greeting him by his name.",
+    });
+  
+    // open the chat bubble
+    widget.open();
+  
+    // close the chat bubble
+    widget.close()
+  
+    // or 
+    widget.toggle()
+  </script>
